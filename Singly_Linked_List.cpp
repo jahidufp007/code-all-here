@@ -1,0 +1,96 @@
+// #include <bits/stdc++.h>
+// using namespace std;
+// class Node
+// {
+//   public: 
+//   int val;
+//   Node* next;
+
+// };
+// int main()
+// {
+// Node a,b,c;
+// a.val=10;
+// b.val=20;
+// c.val=30;
+
+// a.next=&b;
+// b.next=&c;
+// c.next=NULL;
+
+// cout<<a.val<<endl;
+// cout<< (*a.next).val<<endl;
+// cout<<a.next->next->val;
+
+//     return 0;
+// }
+
+
+// #include <bits/stdc++.h>
+// using namespace std;
+
+// class Node
+// {
+//   public: 
+//   int val;
+//   Node* next;
+// Node(int val)
+// {
+//     this->val=val;
+//     this->next=NULL;
+// }
+// };
+// int main()
+// {
+// Node a(10),b(20),c(30);
+
+
+// a.next=&b;
+// b.next=&c;
+
+
+// cout<<a.val<<endl;
+// cout<< (*a.next).val<<endl;
+// cout<<a.next->next->val;
+
+//     return 0;
+// }
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class Node
+{
+  public: 
+  int val;
+  Node* next;
+Node(int val)
+{
+    this->val=val;
+    this->next=NULL;
+}
+};
+int main()
+{
+     Node* head=new Node (10);
+    Node* a=new Node(20);
+   Node* b=new Node(30);
+// a.next=&b;
+// b.next=&c;
+head->next=a;
+a->next=b;
+
+Node* tem=head;
+while(tem!=NULL)
+{
+    cout<<tem->val<<endl;
+    tem=tem->next;
+}
+
+// cout<<a.val<<endl;
+// cout<< (*a.next).val<<endl;
+// cout<<a.next->next->val;
+
+    return 0;
+}
